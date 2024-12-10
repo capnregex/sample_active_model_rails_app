@@ -1,0 +1,13 @@
+<h1>Bread</h1>
+<%= simple_form_for @bread, url: bread_path do |form| %>
+  <%= form.input :a %>
+  <%= form.input :b %>
+  <%= form.submit 'Go' %>
+<% end %>
+<ul>
+  <li>a: <%= @bread.a %></li>
+  <li>b: <%= @bread.b %></li>
+  <li>sum: <%= @bread.sum %></li>
+  <li>product: <%= @bread.product %></li>
+  <li>exponent: <%= @bread.exponent %></li>
+</ul>

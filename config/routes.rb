@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  root to: 'people#index'
+
+  root to: 'bread#show'
+
+  resource :bread, controller: 'bread'
+
   resources :people
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
