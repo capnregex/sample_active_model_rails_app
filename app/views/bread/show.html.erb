@@ -4,10 +4,18 @@
   <%= form.input :b %>
   <%= form.submit 'Go' %>
 <% end %>
+<% if @bread.valid? %>
 <ul>
   <li>a: <%= @bread.a %></li>
   <li>b: <%= @bread.b %></li>
   <li>sum: <%= @bread.sum %></li>
   <li>product: <%= @bread.product %></li>
   <li>exponent: <%= @bread.exponent %></li>
+  <li>a2: <%= @bread.a2 %></li>
+  <li>b2: <%= @bread.b2 %></li>
+  <li>c2: <%= @bread.c2 %></li>
+  <li>c: <%= @bread.c %></li>
 </ul>
+<% else %>
+  Your missing something frank
+<% end %>
