@@ -53,5 +53,9 @@ class Bread
     def call(**)
       new(**).call
     end
+
+    def proc
+      ->(options) { new(**options).call }
+    end
   end
 end

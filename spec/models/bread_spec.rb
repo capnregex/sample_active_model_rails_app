@@ -32,9 +32,9 @@ RSpec.describe Bread do
   it "class.call" do
     foo = [
       { a: 3, b: 4 },
-      { a: 5, b: 11 },
+      { a: 5, b: 12 },
     ]
-    bar = foo.map{ |row| Bread.call(**row) }
-    debugger
+    bar = foo.map(&Bread.proc)
+    expect(bar).to eq([5,13])
   end
 end
